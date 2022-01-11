@@ -209,7 +209,7 @@
             </div>
           </div>
 
-          <button class="w-100 btn btn-primary btn-md my-4" type="submit">
+          <button class="w-100 btn btn-primary btn-md my-4" type="submit" onclick="func()">
             Continue to Login
           </button>
         </form>
@@ -225,6 +225,46 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
+
+    <script>
+      function func()
+      {
+        var a = document.getElementById("firstname").value;
+        var b = document.getElementById("lastname").value;
+        var c = document.getElementById("username").value;
+        var d = document.getElementById("mobile").value;
+        var e = document.getElementById("email").value;
+        var re1 = /[a-z A-Z]/;
+        var re2 = /[0-9]/;
+        var re3 = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        
+
+        if(a.search(re1)==-1)
+        alert("user must contain alphabet");
+
+        else 
+        if(b.search(re1)==-1)
+        alert("user must contain alphabet");
+
+        else 
+        if(c.search(re1)==-1)
+        alert("user must contain alphabet");
+
+        else 
+        if(d.search(re2)==-1)
+        alert("user must contain number");
+
+        else 
+        if(d <=10)
+        alert("user must contain 10 digit number");
+
+        else 
+        if(e.search(re3)==-1)
+        alert("user must contain valid email");
+      }
+    </script>
+
+
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--
